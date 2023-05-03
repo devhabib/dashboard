@@ -1,0 +1,14 @@
+@import "./helpers/variables", "./helpers/reset", "./helpers/fonts";
+
+body {
+    background-color: #f8f9fa;
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    color: $title-color;
+}
+
+.header {
+    background-color: $dark-bg;
+}

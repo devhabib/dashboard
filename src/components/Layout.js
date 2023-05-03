@@ -1,11 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar";
+import Home from "./Home";
 const Layout = () => {
   return (
     <div>
       <Header />
-      <Sidebar />
+      <div className="content-wrapper">
+        <Sidebar />
+        <Home />
+      </div>
     </div>
   );
 };

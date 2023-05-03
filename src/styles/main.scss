@@ -1,5 +1,18 @@
 @import "./helpers/variables", "./helpers/reset", "./helpers/fonts";
-
+%activeHover {
+    background-color: $text-color;
+    margin-right: -25px;
+    margin-left: 25px;
+    padding: 15px 20px;
+    border-radius: 10px 0 0 10px;
+    .menu {
+        color: $white;
+    }
+    .right__content {
+        right: 55px;
+        transform: rotate(90deg) translate(-50%, -50%);
+    }
+}
 body {
     background-color: #f8f9fa;
     font-family: "Inter", sans-serif;
@@ -11,4 +24,68 @@ h1 {
 
 .header {
     background-color: $dark-bg;
+}
+
+.content-wrapper {
+    display: flex;
+}
+
+.sidebar {
+    background-color: $dark-bg;
+    max-width: 250px;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    &__wrapper {
+        padding: 0 20px;
+        &--single {
+            position: relative;
+            padding: 16px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: 0.3s all ease-in-out;
+            .left__content {
+                display: flex;
+                align-items: center;
+            }
+            .icon {
+                width: 25px;
+                height: 25px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .menu {
+                font-weight: 600;
+                font-size: 16px;
+                padding-left: 12px;
+                color: $placeholder-color;
+                transition: 0.3s all ease-out;
+            }
+            .right__content {
+                width: 28px;
+                height: 28px;
+                margin: 0;
+                transition: 0.3s all ease-out;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            &.active {
+                @extend %activeHover;
+            }
+            &:hover {
+                @extend %activeHover;
+            }
+        }
+    }
 }

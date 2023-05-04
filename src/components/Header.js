@@ -2,22 +2,20 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div>
-      <header className="header">
-        <div className="container">
-          <div className="row justify-content-end">
-            <div className="col-3">
-              <div className="header__content">
-                <p>User name</p>
-                <button type="button" className="btn btn-secondary">
-                  Logout
-                </button>
-              </div>
+    <header className="header">
+      <div className="container">
+        <div className="row justify-content-end">
+          <div className="col-3">
+            <div className="header__content">
+              <p>User name</p>
+              <button type="button" className="btn btn-secondary">
+                Logout
+              </button>
             </div>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 };
 
